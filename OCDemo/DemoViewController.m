@@ -195,7 +195,7 @@
         dispatch_async(queue, ^{
             // 相当于加锁，保证按顺序执行queue
             dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-            NSLog(@"i = %zd semaphore = %@", i, semaphore);
+            NSLog(@"i = %d semaphore = %@", i, semaphore);
             // 相当于解锁
             dispatch_semaphore_signal(semaphore);
         });
