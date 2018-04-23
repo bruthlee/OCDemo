@@ -30,6 +30,7 @@
 #import "SocketViewController.h"
 #import "SchemaViewController.h"
 #import "OperationViewController.h"
+#import "WeakSelfViewController.h"
 
 
 @interface DemoViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -60,8 +61,7 @@
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
-    CGRect rect = CGRectMake(20, 20, CGRectGetWidth(self.view.frame) - 40, CGRectGetHeight(self.view.frame) - 40.0);
-    self.tableView.frame = rect;
+    self.tableView.frame = self.view.bounds;
 }
 
 #pragma mark - Masonary
@@ -786,6 +786,13 @@
     [self.navigationController pushViewController:operation animated:YES];
 }
 
+#pragma mark - WeakSelf
+
+- (void)showWeakSelfDemo {
+    WeakSelfViewController *weakCtrl = [[WeakSelfViewController alloc] init];
+    [self.navigationController pushViewController:weakCtrl animated:YES];
+}
+
 #pragma mark - Datas
 
 - (void)demoDatas {
@@ -835,8 +842,6 @@
     [self.dataSource addObject:section6];
     
     DemoObject *math1 = [DemoObject initWithName:@"Segment tree" method:@"showMathController"];
-//    DemoObject *dynamic2 = [DemoObject initWithName:@"Collision Behavior" method:@"showCollisionAnimator"];
-//    DemoObject *dynamic3 = [DemoObject initWithName:@"Launch Animated" method:@"showLaunchAnimator"];
     DemoSection *section7 = [DemoSection initWithTitle:@"Math" list:@[math1]];
     [self.dataSource addObject:section7];
     
@@ -873,6 +878,10 @@
     DemoObject *operationDemo = [DemoObject initWithName:@"OC Operation" method:@"showOperationDemo"];
     DemoSection *operation = [DemoSection initWithTitle:@"Operation" list:@[operationDemo]];
     [self.dataSource addObject:operation];
+    
+    DemoObject *weakDemo = [DemoObject initWithName:@"weak & cyncle" method:@"showWeakSelfDemo"];
+    DemoSection *weakSection = [DemoSection initWithTitle:@"Retain Count" list:@[weakDemo]];
+    [self.dataSource addObject:weakSection];
     
     [self.tableView reloadData];
 }

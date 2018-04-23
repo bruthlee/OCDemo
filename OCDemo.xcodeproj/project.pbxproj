@@ -22,6 +22,7 @@
 		5A460424202472B600325635 /* video.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A460423202472B600325635 /* video.plist */; };
 		5A69F7C52056939D00B8139E /* SchemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A69F7C42056939D00B8139E /* SchemaViewController.m */; };
 		5AB0EF0B1FDFCC25004B554D /* FontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB0EF0A1FDFCC25004B554D /* FontViewController.m */; };
+		5ABD995D208DE6C600452E7E /* WeakSelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABD995C208DE6C600452E7E /* WeakSelfViewController.m */; };
 		5ADF13F7200345570036D09A /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADF13F6200345570036D09A /* VideoViewController.m */; };
 		BD41A8441FBDB47F00DA5BD3 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = BD41A8431FBDB47E00DA5BD3 /* UIImage+GIF.m */; };
 		BD41A8471FBDB53B00DA5BD3 /* LaunchAnimatedController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD41A8461FBDB53B00DA5BD3 /* LaunchAnimatedController.m */; };
@@ -89,6 +90,8 @@
 		5A69F7C42056939D00B8139E /* SchemaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchemaViewController.m; sourceTree = "<group>"; };
 		5AB0EF091FDFCC25004B554D /* FontViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontViewController.h; sourceTree = "<group>"; };
 		5AB0EF0A1FDFCC25004B554D /* FontViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FontViewController.m; sourceTree = "<group>"; };
+		5ABD995B208DE6C600452E7E /* WeakSelfViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakSelfViewController.h; sourceTree = "<group>"; };
+		5ABD995C208DE6C600452E7E /* WeakSelfViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeakSelfViewController.m; sourceTree = "<group>"; };
 		5ADF13F5200345570036D09A /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		5ADF13F6200345570036D09A /* VideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		A25543378ED0EA17E8D9D449 /* Pods-OCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCDemo/Pods-OCDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -250,6 +253,15 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		5ABD995A208DE6AB00452E7E /* WeakSelf */ = {
+			isa = PBXGroup;
+			children = (
+				5ABD995B208DE6C600452E7E /* WeakSelfViewController.h */,
+				5ABD995C208DE6C600452E7E /* WeakSelfViewController.m */,
+			);
+			path = WeakSelf;
+			sourceTree = "<group>";
+		};
 		5ADF13F4200345320036D09A /* Video */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				5A526E0F202C3D7800447749 /* OCDemo.entitlements */,
+				5ABD995A208DE6AB00452E7E /* WeakSelf */,
 				BD8C0EEF20503D2300572306 /* Operation */,
 				5A69F7C22056938500B8139E /* Schema */,
 				5A01F54C2021626F007735E9 /* Category */,
@@ -459,7 +472,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = "";
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = greencici;
 				TargetAttributes = {
 					BD5397F31F372AD60090CD05 = {
@@ -604,6 +617,7 @@
 				BDCE52051FBA9370008D3716 /* Student+CoreDataClass.m in Sources */,
 				5A43B18520073DB700567B5E /* SnowView.m in Sources */,
 				BD5397F91F372AD60090CD05 /* main.m in Sources */,
+				5ABD995D208DE6C600452E7E /* WeakSelfViewController.m in Sources */,
 				BDCC4A5F1FC6B6FC0031F706 /* LLLinkViewController.m in Sources */,
 				5A3790B51FD51F8F00833957 /* JHChartViewController.m in Sources */,
 				BDCE521B1FBAFB58008D3716 /* DynamicAnimatorViewController.m in Sources */,
@@ -650,6 +664,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -657,6 +672,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -704,6 +720,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -711,6 +728,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
