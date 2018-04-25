@@ -31,6 +31,7 @@
 #import "SchemaViewController.h"
 #import "OperationViewController.h"
 #import "WeakSelfViewController.h"
+#import "KVOViewController.h"
 
 
 @interface DemoViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -195,7 +196,7 @@
         dispatch_async(queue, ^{
             // 相当于加锁，保证按顺序执行queue
             dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-            NSLog(@"i = %d semaphore = %@", i, semaphore);
+            NSLog(@"i = %d", i);
             // 相当于解锁
             dispatch_semaphore_signal(semaphore);
         });
@@ -793,6 +794,13 @@
     [self.navigationController pushViewController:weakCtrl animated:YES];
 }
 
+#pragma mark - KVO
+
+- (void)showKVODemo {
+    KVOViewController *ctrl = [[KVOViewController alloc] init];
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
+
 #pragma mark - Datas
 
 - (void)demoDatas {
@@ -882,6 +890,10 @@
     DemoObject *weakDemo = [DemoObject initWithName:@"weak & cyncle" method:@"showWeakSelfDemo"];
     DemoSection *weakSection = [DemoSection initWithTitle:@"Retain Count" list:@[weakDemo]];
     [self.dataSource addObject:weakSection];
+    
+    DemoObject *kvoDemo = [DemoObject initWithName:@"Simple KVO Testing" method:@"showKVODemo"];
+    DemoSection *kvoSection = [DemoSection initWithTitle:@"KVO" list:@[kvoDemo]];
+    [self.dataSource addObject:kvoSection];
     
     [self.tableView reloadData];
 }

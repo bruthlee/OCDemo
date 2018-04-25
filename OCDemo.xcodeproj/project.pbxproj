@@ -11,6 +11,7 @@
 		5A01F54B202160F2007735E9 /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A01F54A202160F2007735E9 /* SocketManager.m */; };
 		5A01F54F202162B2007735E9 /* NSDictionary+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A01F54E202162B2007735E9 /* NSDictionary+Parse.m */; };
 		5A01F552202164CF007735E9 /* SocketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A01F551202164CF007735E9 /* SocketViewController.m */; };
+		5A25C32320909A3B00246B2E /* KVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A25C32220909A3B00246B2E /* KVOViewController.m */; };
 		5A3790B51FD51F8F00833957 /* JHChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3790B41FD51F8F00833957 /* JHChartViewController.m */; };
 		5A43B18120073DB700567B5E /* YUAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A43B17720073DB700567B5E /* YUAnimationViewController.m */; };
 		5A43B18220073DB700567B5E /* YULoadingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A43B17820073DB700567B5E /* YULoadingLabel.m */; };
@@ -68,6 +69,8 @@
 		5A01F54E202162B2007735E9 /* NSDictionary+Parse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Parse.m"; sourceTree = "<group>"; };
 		5A01F550202164CF007735E9 /* SocketViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocketViewController.h; sourceTree = "<group>"; };
 		5A01F551202164CF007735E9 /* SocketViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocketViewController.m; sourceTree = "<group>"; };
+		5A25C32120909A3B00246B2E /* KVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVOViewController.h; sourceTree = "<group>"; };
+		5A25C32220909A3B00246B2E /* KVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVOViewController.m; sourceTree = "<group>"; };
 		5A3790B31FD51F8F00833957 /* JHChartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JHChartViewController.h; sourceTree = "<group>"; };
 		5A3790B41FD51F8F00833957 /* JHChartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JHChartViewController.m; sourceTree = "<group>"; };
 		5A43B17520073DB700567B5E /* SnowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnowView.h; sourceTree = "<group>"; };
@@ -207,6 +210,15 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		5A25C3202090976400246B2E /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				5A25C32120909A3B00246B2E /* KVOViewController.h */,
+				5A25C32220909A3B00246B2E /* KVOViewController.m */,
+			);
+			path = KVO;
+			sourceTree = "<group>";
+		};
 		5A3790B21FD51F4600833957 /* Charts */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				5A526E0F202C3D7800447749 /* OCDemo.entitlements */,
+				5A25C3202090976400246B2E /* KVO */,
 				5ABD995A208DE6AB00452E7E /* WeakSelf */,
 				BD8C0EEF20503D2300572306 /* Operation */,
 				5A69F7C22056938500B8139E /* Schema */,
@@ -610,6 +623,7 @@
 				BDCE52061FBA9370008D3716 /* Teacher+CoreDataClass.m in Sources */,
 				BD8C0EF220503D4500572306 /* OperationViewController.m in Sources */,
 				5A01F552202164CF007735E9 /* SocketViewController.m in Sources */,
+				5A25C32320909A3B00246B2E /* KVOViewController.m in Sources */,
 				BDCC4A561FC660E50031F706 /* LLSingleLinkedList.m in Sources */,
 				BDCE52041FBA9370008D3716 /* DataCenter.m in Sources */,
 				5A43B18220073DB700567B5E /* YULoadingLabel.m in Sources */,
