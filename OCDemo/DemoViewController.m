@@ -32,6 +32,7 @@
 #import "OperationViewController.h"
 #import "WeakSelfViewController.h"
 #import "KVOViewController.h"
+#import "WebViewController.h"
 
 
 @interface DemoViewController () <UITableViewDataSource, UITableViewDelegate>
@@ -63,6 +64,24 @@
     [super viewWillLayoutSubviews];
     
     self.tableView.frame = self.view.bounds;
+}
+
+- (void)runTimer {
+    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+    NSBlockOperation *block = [NSBlockOperation blockOperationWithBlock:^{
+        while (1) {
+            NSLog(@"date1: %@",[NSDate date]);
+            sleep(1);
+        }
+    }];
+    [queue addOperation:block];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        while (1) {
+            NSLog(@"date2: %@",[NSDate date]);
+            sleep(1);
+        }
+    });
 }
 
 #pragma mark - Masonary
@@ -801,12 +820,23 @@
     [self.navigationController pushViewController:ctrl animated:YES];
 }
 
+#pragma mark - WebView
+
+- (void)showWebDemo {
+    WebViewController *ctrl = [[WebViewController alloc] init];
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
+
 #pragma mark - Datas
 
 - (void)demoDatas {
     DemoObject *font = [DemoObject initWithName:@"Fonts" method:@"showFonts"];
     DemoSection *secFont = [DemoSection initWithTitle:@"系统字体" list:@[font]];
     [self.dataSource addObject:secFont];
+    
+    DemoObject *web = [DemoObject initWithName:@"UIWebView" method:@"showWebDemo"];
+    DemoSection *webSection = [DemoSection initWithTitle:@"Web" list:@[web]];
+    [self.dataSource addObject:webSection];
     
     DemoObject *equal = [DemoObject initWithName:@"自定义Equal & Hash" method:@"testCustomEqual"];
     DemoSection *section0 = [DemoSection initWithTitle:@"值相等" list:@[equal]];

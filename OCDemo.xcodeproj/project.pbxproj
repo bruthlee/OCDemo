@@ -22,6 +22,8 @@
 		5A460422202469AB00325635 /* VideoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A460421202469AB00325635 /* VideoManager.m */; };
 		5A460424202472B600325635 /* video.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A460423202472B600325635 /* video.plist */; };
 		5A69F7C52056939D00B8139E /* SchemaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A69F7C42056939D00B8139E /* SchemaViewController.m */; };
+		5A785F54209473140087DFE0 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A785F53209473140087DFE0 /* WebViewController.m */; };
+		5A785F56209473450087DFE0 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 5A785F55209473450087DFE0 /* index.html */; };
 		5AB0EF0B1FDFCC25004B554D /* FontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB0EF0A1FDFCC25004B554D /* FontViewController.m */; };
 		5ABD995D208DE6C600452E7E /* WeakSelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABD995C208DE6C600452E7E /* WeakSelfViewController.m */; };
 		5ADF13F7200345570036D09A /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADF13F6200345570036D09A /* VideoViewController.m */; };
@@ -91,6 +93,9 @@
 		5A526E0F202C3D7800447749 /* OCDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OCDemo.entitlements; sourceTree = "<group>"; };
 		5A69F7C32056939D00B8139E /* SchemaViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SchemaViewController.h; sourceTree = "<group>"; };
 		5A69F7C42056939D00B8139E /* SchemaViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SchemaViewController.m; sourceTree = "<group>"; };
+		5A785F52209473140087DFE0 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		5A785F53209473140087DFE0 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		5A785F55209473450087DFE0 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		5AB0EF091FDFCC25004B554D /* FontViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontViewController.h; sourceTree = "<group>"; };
 		5AB0EF0A1FDFCC25004B554D /* FontViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FontViewController.m; sourceTree = "<group>"; };
 		5ABD995B208DE6C600452E7E /* WeakSelfViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeakSelfViewController.h; sourceTree = "<group>"; };
@@ -256,6 +261,16 @@
 			path = Schema;
 			sourceTree = "<group>";
 		};
+		5A785F51209472FE0087DFE0 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				5A785F52209473140087DFE0 /* WebViewController.h */,
+				5A785F53209473140087DFE0 /* WebViewController.m */,
+				5A785F55209473450087DFE0 /* index.html */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		5AB0EF081FDFCC06004B554D /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				5A526E0F202C3D7800447749 /* OCDemo.entitlements */,
+				5A785F51209472FE0087DFE0 /* WebView */,
 				5A25C3202090976400246B2E /* KVO */,
 				5ABD995A208DE6AB00452E7E /* WeakSelf */,
 				BD8C0EEF20503D2300572306 /* Operation */,
@@ -526,6 +542,7 @@
 				BD41A84C1FBDBCB400DA5BD3 /* p1_gif.gif in Resources */,
 				BD5398071F372AD60090CD05 /* LaunchScreen.storyboard in Resources */,
 				BD5398041F372AD60090CD05 /* Assets.xcassets in Resources */,
+				5A785F56209473450087DFE0 /* index.html in Resources */,
 				BD5398021F372AD60090CD05 /* Main.storyboard in Resources */,
 				5A460424202472B600325635 /* video.plist in Resources */,
 			);
@@ -613,6 +630,7 @@
 				5ADF13F7200345570036D09A /* VideoViewController.m in Sources */,
 				BDCE520E1FBA9567008D3716 /* DemoObject.m in Sources */,
 				5A01F54B202160F2007735E9 /* SocketManager.m in Sources */,
+				5A785F54209473140087DFE0 /* WebViewController.m in Sources */,
 				BDCE52241FBB516B008D3716 /* BaseNavigationController.m in Sources */,
 				5AB0EF0B1FDFCC25004B554D /* FontViewController.m in Sources */,
 				BD5397FC1F372AD60090CD05 /* AppDelegate.m in Sources */,

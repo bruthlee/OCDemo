@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head lang="zh-cmn-Hans">
+        <meta charset="UTF-8">
+            <title>乐享宇通Js与Native交互接口</title>
+            <meta name="renderer" content="webkit">
+                <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+                    <meta name="viewport" content="width=device-width,initial-scale=0.5,user-scalable=no"/>
+    </head>
+    <style>
+        .btn {
+            text-align: center;
+            background: dodgerblue;
+            color: white;
+            padding: 20px;
+            margin: 30px;
+            font-size: 24px;
+            border-radius: 4px;
+            box-shadow: 4px 2px 10px #999;
+        }
+    
+    .btn:active {
+        opacity: .7;
+        box-shadow: 4px 2px 10px #555;
+    }
+    </style>
+    <body>
+        <h1>乐享宇通Js与Native交互接口</h1>
+        <hr>
+        <input type="text" id="clock" />
+        <hr>
+        <div class="btn" onclick="int=window.clearInterval(int)">停止</button>
+        <script>
+            var int=self.setInterval("clock()",1000);
+            function clock()
+            {
+                var d=new Date();
+                var t=d.toLocaleTimeString();
+                document.getElementById("clock").value=t;
+                console.log(t);
+            }
+        </script>
+    </body>
+</html>
+
