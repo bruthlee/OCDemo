@@ -45,11 +45,10 @@
 #pragma mark -
 
 @interface CollisionBehaviorController () {
-    CGPoint _orangeCenter;
-    CGPoint _purpleCenter;
-    
     UICollisionBehaviorMode _currentMode;
 }
+@property (nonatomic, assign) CGPoint orangeCenter;
+@property (nonatomic, assign) CGPoint purpleCenter;
 @property (nonatomic, strong) CollisionView *collisionView;
 @property (nonatomic, strong) CollisionView *otherCollisionView;
 @property (nonatomic, strong) UIDynamicAnimator *animator;
@@ -74,7 +73,7 @@
     CGFloat y = CGRectGetMaxY(seg.frame);
     self.collisionView = [[CollisionView alloc] initWithFrame:CGRectMake(20, y + 20, 80, 80)];
     [self.view addSubview:self.collisionView];
-    _orangeCenter = self.collisionView.center;
+    self.orangeCenter = self.collisionView.center;
     
     self.otherCollisionView = [[CollisionView alloc] initWithFrame:CGRectMake(100, y + 30, 100, 100)];
     self.otherCollisionView.fillColor = [UIColor purpleColor];
@@ -101,9 +100,11 @@
     if (_currentMode != mode) {
         _currentMode = mode;
         [self.animator removeAllBehaviors];
+        
+        __weak typeof(self) weakSelf = self;
         [UIView animateWithDuration:0.3 animations:^{
-            self.collisionView.center = _orangeCenter;
-            self.otherCollisionView.center = _purpleCenter;
+            weakSelf.collisionView.center = weakSelf.orangeCenter;
+            weakSelf.otherCollisionView.center = weakSelf.purpleCenter;
         } completion:^(BOOL finished) {
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 [self addAnimate];

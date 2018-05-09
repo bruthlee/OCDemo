@@ -33,7 +33,8 @@
 #import "WeakSelfViewController.h"
 #import "KVOViewController.h"
 #import "WebViewController.h"
-
+#import "TabBarTestController.h"
+#import "LifeCycleViewController.h"
 
 @interface DemoViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -827,12 +828,34 @@
     [self.navigationController pushViewController:ctrl animated:YES];
 }
 
+#pragma mark - TabBar
+
+- (void)showTabBarDemo {
+    TabBarTestController *ctrl = [[TabBarTestController alloc] init];
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
+
+#pragma mark - LifeCycle
+
+- (void)showLifeCycleDemo {
+    LifeCycleViewController *ctrl = [[LifeCycleViewController alloc] init];
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
+
 #pragma mark - Datas
 
 - (void)demoDatas {
     DemoObject *font = [DemoObject initWithName:@"Fonts" method:@"showFonts"];
     DemoSection *secFont = [DemoSection initWithTitle:@"系统字体" list:@[font]];
     [self.dataSource addObject:secFont];
+    
+    DemoObject *tab = [DemoObject initWithName:@"Normal TabBar Controller" method:@"showTabBarDemo"];
+    DemoSection *secTab = [DemoSection initWithTitle:@"TabBar" list:@[tab]];
+    [self.dataSource addObject:secTab];
+    
+    DemoObject *ctrlCycle = [DemoObject initWithName:@"ViewController Life Cycle" method:@"showLifeCycleDemo"];
+    DemoSection *secCycle = [DemoSection initWithTitle:@"Life Cycle" list:@[ctrlCycle]];
+    [self.dataSource addObject:secCycle];
     
     DemoObject *web = [DemoObject initWithName:@"UIWebView" method:@"showWebDemo"];
     DemoSection *webSection = [DemoSection initWithTitle:@"Web" list:@[web]];

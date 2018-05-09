@@ -41,5 +41,9 @@ target 'OCDemo' do
   pod 'Tangram', '~> 1.0.7'
   #- Homepage: https://github.com/alibaba/tangram-ios
   #- Source:   https://github.com/alibaba/Tangram-iOS.git
+
+  pod 'Aspects', '~> 1.4.1'
+  #- Homepage: https://github.com/steipete/Aspects
+  #- Source:   https://github.com/steipete/Aspects.git
   
 end

@@ -27,6 +27,10 @@
 		5AB0EF0B1FDFCC25004B554D /* FontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB0EF0A1FDFCC25004B554D /* FontViewController.m */; };
 		5ABD995D208DE6C600452E7E /* WeakSelfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABD995C208DE6C600452E7E /* WeakSelfViewController.m */; };
 		5ADF13F7200345570036D09A /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADF13F6200345570036D09A /* VideoViewController.m */; };
+		BD0BB8D120A34FDA00CC6DC1 /* TabBarTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB8D020A34FDA00CC6DC1 /* TabBarTestController.m */; };
+		BD0BB8D420A34FFF00CC6DC1 /* TabSubFirstController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB8D320A34FFF00CC6DC1 /* TabSubFirstController.m */; };
+		BD0BB8D720A3501000CC6DC1 /* TabSubSecondController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB8D620A3501000CC6DC1 /* TabSubSecondController.m */; };
+		BD0BB8DB20A35A9C00CC6DC1 /* LifeCycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0BB8DA20A35A9C00CC6DC1 /* LifeCycleViewController.m */; };
 		BD41A8441FBDB47F00DA5BD3 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = BD41A8431FBDB47E00DA5BD3 /* UIImage+GIF.m */; };
 		BD41A8471FBDB53B00DA5BD3 /* LaunchAnimatedController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD41A8461FBDB53B00DA5BD3 /* LaunchAnimatedController.m */; };
 		BD41A84A1FBDB79A00DA5BD3 /* UIView+FrameCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = BD41A8491FBDB79A00DA5BD3 /* UIView+FrameCategory.m */; };
@@ -103,6 +107,14 @@
 		5ADF13F5200345570036D09A /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
 		5ADF13F6200345570036D09A /* VideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
 		A25543378ED0EA17E8D9D449 /* Pods-OCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCDemo/Pods-OCDemo.release.xcconfig"; sourceTree = "<group>"; };
+		BD0BB8CF20A34FDA00CC6DC1 /* TabBarTestController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarTestController.h; sourceTree = "<group>"; };
+		BD0BB8D020A34FDA00CC6DC1 /* TabBarTestController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarTestController.m; sourceTree = "<group>"; };
+		BD0BB8D220A34FFF00CC6DC1 /* TabSubFirstController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabSubFirstController.h; sourceTree = "<group>"; };
+		BD0BB8D320A34FFF00CC6DC1 /* TabSubFirstController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabSubFirstController.m; sourceTree = "<group>"; };
+		BD0BB8D520A3501000CC6DC1 /* TabSubSecondController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabSubSecondController.h; sourceTree = "<group>"; };
+		BD0BB8D620A3501000CC6DC1 /* TabSubSecondController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabSubSecondController.m; sourceTree = "<group>"; };
+		BD0BB8D920A35A9C00CC6DC1 /* LifeCycleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LifeCycleViewController.h; sourceTree = "<group>"; };
+		BD0BB8DA20A35A9C00CC6DC1 /* LifeCycleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeCycleViewController.m; sourceTree = "<group>"; };
 		BD41A8421FBDB47E00DA5BD3 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
 		BD41A8431FBDB47E00DA5BD3 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
 		BD41A8451FBDB53B00DA5BD3 /* LaunchAnimatedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchAnimatedController.h; sourceTree = "<group>"; };
@@ -301,6 +313,28 @@
 			path = Video;
 			sourceTree = "<group>";
 		};
+		BD0BB8CE20A34FBA00CC6DC1 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BB8CF20A34FDA00CC6DC1 /* TabBarTestController.h */,
+				BD0BB8D020A34FDA00CC6DC1 /* TabBarTestController.m */,
+				BD0BB8D220A34FFF00CC6DC1 /* TabSubFirstController.h */,
+				BD0BB8D320A34FFF00CC6DC1 /* TabSubFirstController.m */,
+				BD0BB8D520A3501000CC6DC1 /* TabSubSecondController.h */,
+				BD0BB8D620A3501000CC6DC1 /* TabSubSecondController.m */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		BD0BB8D820A35A7E00CC6DC1 /* LifeCycle */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BB8D920A35A9C00CC6DC1 /* LifeCycleViewController.h */,
+				BD0BB8DA20A35A9C00CC6DC1 /* LifeCycleViewController.m */,
+			);
+			path = LifeCycle;
+			sourceTree = "<group>";
+		};
 		BD5397EB1F372AD60090CD05 = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +357,8 @@
 			isa = PBXGroup;
 			children = (
 				5A526E0F202C3D7800447749 /* OCDemo.entitlements */,
+				BD0BB8D820A35A7E00CC6DC1 /* LifeCycle */,
+				BD0BB8CE20A34FBA00CC6DC1 /* Tab */,
 				5A785F51209472FE0087DFE0 /* WebView */,
 				5A25C3202090976400246B2E /* KVO */,
 				5ABD995A208DE6AB00452E7E /* WeakSelf */,
@@ -620,11 +656,13 @@
 				5A460422202469AB00325635 /* VideoManager.m in Sources */,
 				5A43B18120073DB700567B5E /* YUAnimationViewController.m in Sources */,
 				BDCE52211FBB4E84008D3716 /* BaseViewController.m in Sources */,
+				BD0BB8D720A3501000CC6DC1 /* TabSubSecondController.m in Sources */,
 				BDCC4A591FC671840031F706 /* LLDoubleLinkedList.m in Sources */,
 				BDCE52081FBA9370008D3716 /* Student+CoreDataProperties.m in Sources */,
 				BDCE52141FBAE126008D3716 /* FetchedResultViewController.m in Sources */,
 				BDCE52031FBA9370008D3716 /* Department+CoreDataProperties.m in Sources */,
 				BDCE52111FBA96CB008D3716 /* DemoViewController.m in Sources */,
+				BD0BB8DB20A35A9C00CC6DC1 /* LifeCycleViewController.m in Sources */,
 				BDCE52011FBA9370008D3716 /* Department+CoreDataClass.m in Sources */,
 				BD41A8471FBDB53B00DA5BD3 /* LaunchAnimatedController.m in Sources */,
 				5ADF13F7200345570036D09A /* VideoViewController.m in Sources */,
@@ -638,9 +676,11 @@
 				BDCE52071FBA9370008D3716 /* Teacher+CoreDataProperties.m in Sources */,
 				5A43B18320073DB700567B5E /* EmitterLayerView.m in Sources */,
 				5A01F54F202162B2007735E9 /* NSDictionary+Parse.m in Sources */,
+				BD0BB8D120A34FDA00CC6DC1 /* TabBarTestController.m in Sources */,
 				BDCE52061FBA9370008D3716 /* Teacher+CoreDataClass.m in Sources */,
 				BD8C0EF220503D4500572306 /* OperationViewController.m in Sources */,
 				5A01F552202164CF007735E9 /* SocketViewController.m in Sources */,
+				BD0BB8D420A34FFF00CC6DC1 /* TabSubFirstController.m in Sources */,
 				5A25C32320909A3B00246B2E /* KVOViewController.m in Sources */,
 				BDCC4A561FC660E50031F706 /* LLSingleLinkedList.m in Sources */,
 				BDCE52041FBA9370008D3716 /* DataCenter.m in Sources */,

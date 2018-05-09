@@ -98,8 +98,13 @@
     NSInteger row = indexPath.row;
     if (section == 0) {
         if (row == 0) {
-            MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:@"http://content.viki.com/test_ios/ios_240.m3u8"]];
-            [self presentMoviePlayerViewControllerAnimated:player];
+            AVPlayer *player = [AVPlayer playerWithURL:[NSURL URLWithString:@"http://content.viki.com/test_ios/ios_240.m3u8"]];
+            AVPlayerViewController *ctrl = [[AVPlayerViewController alloc] init];
+            ctrl.player = player;
+            [self presentViewController:ctrl animated:YES completion:nil];
+            
+//            MPMoviePlayerViewController *player = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:@"http://content.viki.com/test_ios/ios_240.m3u8"]];
+//            [self presentMoviePlayerViewControllerAnimated:player];
         }
     }
     else {

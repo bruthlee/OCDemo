@@ -20,9 +20,9 @@
 
 
 @interface SocketManager() <GCDAsyncSocketDelegate> {
-    NSThread *_socketThread;
     BOOL _connectStatus;
 }
+@property (nonatomic, strong) NSThread *socketThread;
 @property (nonatomic, copy) NSString *serHost;
 @property (nonatomic, copy) NSString *serPort;
 @property (nonatomic, assign) NSInteger heartbeat;
@@ -238,28 +238,30 @@ completionHandler:(void (^)(BOOL shouldTrustPeer))completionHandler {
 }
 
 - (void)initThread {
+    __weak typeof(self) weakSelf = self;
     dispatch_sync(SocketQueue(), ^{
-        _socketThread = [[NSThread alloc] initWithTarget:self selector:@selector(receiveMessage) object:nil];
-        [_socketThread start];
+        weakSelf.socketThread = [[NSThread alloc] initWithTarget:self selector:@selector(receiveMessage) object:nil];
+        [weakSelf.socketThread start];
     });
 }
 
 - (void)getSocketServiceAddress {
     [self returnMessage:@"正在获取服务器地址..."];
     NSString *url = @"https://apitest.yutong.com:20443/shake/center/api/conf/setting.do";
+    __weak typeof(self) weakSelf = self;
     NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:url] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (data) {
             NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
             if (dic && [dic theValueForKey:@"data"]) {
                 NSDictionary *data = [dic theValueForKey:@"data"];
                 NSString *servAddr = [data theValueForKey:@"servAddr"];
-                _heartbeat = [[data theValueForKey:@"heartBeatTimeSecond"] integerValue];
+                weakSelf.heartbeat = [[data theValueForKey:@"heartBeatTimeSecond"] integerValue];
                 if (servAddr) {
                     NSArray *list = [servAddr componentsSeparatedByString:@","];
                     NSString *addr = [list firstObject];
                     list = [addr componentsSeparatedByString:@":"];
-                    _serHost = [list firstObject];
-                    _serPort = [list lastObject];
+                    weakSelf.serHost = [list firstObject];
+                    weakSelf.serPort = [list lastObject];
                 }
                 [self returnMessage:[NSString stringWithFormat:@"服务器地址获取成功: %@", [dic JSONLocalString]]];
             }

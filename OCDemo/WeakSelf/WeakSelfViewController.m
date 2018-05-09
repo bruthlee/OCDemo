@@ -111,6 +111,7 @@ typedef void(^BlockTableBlock)(void);
     __weak BlockTable *weak = table;
     table.block = ^{
         __strong BlockTable *strong = weak;
+        NSLog(@"[initAndTypeNilBlock] table retain = %ld",CFGetRetainCount((__bridge CFTypeRef)strong));
     };
     NSLog(@"[initAndTypeNilBlock] table retain = %ld",CFGetRetainCount((__bridge CFTypeRef)table));
 }
@@ -118,8 +119,8 @@ typedef void(^BlockTableBlock)(void);
 - (void)initAndOutsideNilBlock {
     BlockTable *table = [BlockTable new];
     table.block = ^{
-        __weak typeof(table) weak = table;
-        NSLog(@"weak: %@, %ld",weak, (long)CFGetRetainCount((__bridge CFTypeRef)weak));
+//        __weak typeof(table) weak = table;
+//        NSLog(@"weak: %@, %ld",weak, (long)CFGetRetainCount((__bridge CFTypeRef)weak));
         /// 死循环
         //[weak reloadData];
     };

@@ -10,6 +10,8 @@
 
 @interface BaseViewController : UIViewController
 
+@property (nonatomic, assign) BOOL showAutolayoutLog;
+
 - (void)setupButton:(CGRect)rect title:(NSString *)title color:(UIColor *)color action:(SEL)action;
 
 @end

@@ -1,24 +1,38 @@
 //
-//  BaseViewController.m
+//  TabBarTestController.m
 //  OCDemo
 //
-//  Created by lixiaoyong on 2017/11/15.
-//  Copyright © 2017年 greencici. All rights reserved.
+//  Created by hollywater on 2018/5/9.
+//  Copyright © 2018年 greencici. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "TabBarTestController.h"
 
-@interface BaseViewController ()
+#import "BaseNavigationController.h"
+#import "TabSubFirstController.h"
+#import "TabSubSecondController.h"
+
+@interface TabBarTestController ()
 
 @end
 
-@implementation BaseViewController
+@implementation TabBarTestController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
-    //self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    TabSubFirstController *first = [[TabSubFirstController alloc] init];
+    BaseNavigationController *nav1 = [[BaseNavigationController alloc] initWithRootViewController:first];
+    nav1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"First" image:[UIImage imageNamed:@"tea"] selectedImage:[UIImage imageNamed:@"tea_on"]];
+    
+    TabSubSecondController *second = [[TabSubSecondController alloc] init];
+//    BaseNavigationController *nav2 = [[BaseNavigationController alloc] initWithRootViewController:second];
+    second.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Second" image:[UIImage imageNamed:@"windmill"] selectedImage:[UIImage imageNamed:@"windmill_on"]];
+    
+//    self.viewControllers = @[nav1, nav2];
+//    self.viewControllers = @[first, second];
+    self.viewControllers = @[nav1, second];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,10 +49,6 @@
 }
 
 - (void)printLayoutInset:(NSString *)log {
-    if (self.showAutolayoutLog == NO) {
-        return;
-    }
-    
     NSLog(@"*****************************************************");
     NSLog(@"***************%@****************",log);
     NSLog(@"[%@]: %@",NSStringFromClass(self.class), self.view);
@@ -64,34 +74,6 @@
     }
     
     NSLog(@"*****************************************************");
-}
-
-- (void)setupButton:(CGRect)rect title:(NSString *)title color:(UIColor *)color action:(SEL)action {
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    button.frame = rect;
-    button.backgroundColor = color;
-    [button setTitle:title forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-}
-
-#pragma mark - Navigation
-
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleLightContent;
-}
-
-- (BOOL)shouldAutorotate {
-    return NO;
-}
-
-- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
-    return UIInterfaceOrientationPortrait;
-}
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations {
-    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

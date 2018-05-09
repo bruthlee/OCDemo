@@ -107,30 +107,31 @@
     UICollisionBehavior *collision = [[UICollisionBehavior alloc] initWithItems:@[self.xingImageView,self.outImageView]];
     collision.collisionMode = UICollisionBehaviorModeEverything;
     
+    __weak typeof(self) weakSelf = self;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_animator addBehavior:snap2];
+        [weakSelf.animator addBehavior:snap2];
     });
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_animator addBehavior:snap3];
+        [weakSelf.animator addBehavior:snap3];
     });
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_animator addBehavior:snap1];
+        [weakSelf.animator addBehavior:snap1];
     });
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.6 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_animator addBehavior:gravity];
-        [_animator addBehavior:collision];
+        [weakSelf.animator addBehavior:gravity];
+        [weakSelf.animator addBehavior:collision];
     });
     
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [_animator addBehavior:snap4];
+        [weakSelf.animator addBehavior:snap4];
     });
     
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [UIView animateWithDuration:3.f animations:^{
-            _nowImageView.alpha = 1.0;
-            _personImageView.alpha = 1.0;
+            weakSelf.nowImageView.alpha = 1.0;
+            weakSelf.personImageView.alpha = 1.0;
         }];
     });
 }
