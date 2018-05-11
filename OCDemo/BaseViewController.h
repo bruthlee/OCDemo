@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "BaseTableViewCell.h"
+
 @interface BaseViewController : UIViewController
 
 @property (nonatomic, assign) BOOL showAutolayoutLog;

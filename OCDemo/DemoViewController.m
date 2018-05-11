@@ -35,6 +35,7 @@
 #import "WebViewController.h"
 #import "TabBarTestController.h"
 #import "LifeCycleViewController.h"
+#import "KVCViewController.h"
 
 @interface DemoViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -842,6 +843,13 @@
     [self.navigationController pushViewController:ctrl animated:YES];
 }
 
+#pragma mark - KVC
+
+- (void)showKvcDemo {
+    KVCViewController *ctrl = [[KVCViewController alloc] init];
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
+
 #pragma mark - Datas
 
 - (void)demoDatas {
@@ -947,6 +955,10 @@
     DemoObject *kvoDemo = [DemoObject initWithName:@"Simple KVO Testing" method:@"showKVODemo"];
     DemoSection *kvoSection = [DemoSection initWithTitle:@"KVO" list:@[kvoDemo]];
     [self.dataSource addObject:kvoSection];
+    
+    DemoObject *kvcDemo = [DemoObject initWithName:@"The basic usage of KVC" method:@"showKvcDemo"];
+    DemoSection *kvcSec = [DemoSection initWithTitle:@"KVC" list:@[kvcDemo]];
+    [self.dataSource addObject:kvcSec];
     
     [self.tableView reloadData];
 }

@@ -33,6 +33,8 @@
 
 @property (nonatomic, copy) NSString *params;
 
+@property (nonatomic, strong) id data;
+
 @end
 
 

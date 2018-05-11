@@ -42,7 +42,7 @@
 }
 
 - (void)dealloc {
-    [self removeObserver:self.testObject forKeyPath:@"name"];
+    [self.testObject removeObserver:self forKeyPath:@"name"];
 }
 
 - (void)didReceiveMemoryWarning {
