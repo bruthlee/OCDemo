@@ -47,6 +47,7 @@
 		BDAF68FC20A5ED46002F0563 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDAF68FB20A5ED46002F0563 /* BaseTableViewCell.m */; };
 		BDB3583D20A835F2003B6039 /* AOPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB3583C20A835F2003B6039 /* AOPViewController.m */; };
 		BDB3584020A83E64003B6039 /* UIViewController+AOP.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB3583F20A83E64003B6039 /* UIViewController+AOP.m */; };
+		BDB3584320A8777B003B6039 /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB3584220A8777B003B6039 /* UIViewController+Category.m */; };
 		BDCC4A561FC660E50031F706 /* LLSingleLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC4A551FC660E50031F706 /* LLSingleLinkedList.m */; };
 		BDCC4A591FC671840031F706 /* LLDoubleLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC4A581FC671840031F706 /* LLDoubleLinkedList.m */; };
 		BDCC4A5F1FC6B6FC0031F706 /* LLLinkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCC4A5E1FC6B6FC0031F706 /* LLLinkViewController.m */; };
@@ -149,6 +150,8 @@
 		BDB3583C20A835F2003B6039 /* AOPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AOPViewController.m; sourceTree = "<group>"; };
 		BDB3583E20A83E64003B6039 /* UIViewController+AOP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AOP.h"; sourceTree = "<group>"; };
 		BDB3583F20A83E64003B6039 /* UIViewController+AOP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AOP.m"; sourceTree = "<group>"; };
+		BDB3584120A8777B003B6039 /* UIViewController+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Category.h"; sourceTree = "<group>"; };
+		BDB3584220A8777B003B6039 /* UIViewController+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Category.m"; sourceTree = "<group>"; };
 		BDCC4A541FC660E50031F706 /* LLSingleLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLSingleLinkedList.h; sourceTree = "<group>"; };
 		BDCC4A551FC660E50031F706 /* LLSingleLinkedList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLSingleLinkedList.m; sourceTree = "<group>"; };
 		BDCC4A571FC671840031F706 /* LLDoubleLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLDoubleLinkedList.h; sourceTree = "<group>"; };
@@ -371,8 +374,8 @@
 		BD5397F61F372AD60090CD05 /* OCDemo */ = {
 			isa = PBXGroup;
 			children = (
-				BDB3583720A83512003B6039 /* AOP(aspect oriented program) */,
 				5A526E0F202C3D7800447749 /* OCDemo.entitlements */,
+				BDB3583720A83512003B6039 /* AOP(aspect oriented program) */,
 				BD0BB8D820A35A7E00CC6DC1 /* LifeCycle */,
 				BD0BB8CE20A34FBA00CC6DC1 /* Tab */,
 				5A785F51209472FE0087DFE0 /* WebView */,
@@ -456,6 +459,8 @@
 				BDB3583C20A835F2003B6039 /* AOPViewController.m */,
 				BDB3583E20A83E64003B6039 /* UIViewController+AOP.h */,
 				BDB3583F20A83E64003B6039 /* UIViewController+AOP.m */,
+				BDB3584120A8777B003B6039 /* UIViewController+Category.h */,
+				BDB3584220A8777B003B6039 /* UIViewController+Category.m */,
 			);
 			path = "AOP(aspect oriented program)";
 			sourceTree = "<group>";
@@ -716,6 +721,7 @@
 				BDCE52241FBB516B008D3716 /* BaseNavigationController.m in Sources */,
 				5AB0EF0B1FDFCC25004B554D /* FontViewController.m in Sources */,
 				BD5397FC1F372AD60090CD05 /* AppDelegate.m in Sources */,
+				BDB3584320A8777B003B6039 /* UIViewController+Category.m in Sources */,
 				BDCE520B1FBA9370008D3716 /* PersonObject.m in Sources */,
 				BDCE52071FBA9370008D3716 /* Teacher+CoreDataProperties.m in Sources */,
 				BDB3584020A83E64003B6039 /* UIViewController+AOP.m in Sources */,
