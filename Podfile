@@ -46,4 +46,8 @@ target 'OCDemo' do
   #- Homepage: https://github.com/steipete/Aspects
   #- Source:   https://github.com/steipete/Aspects.git
   
+  pod 'HHRouter', '~> 0.1.9'
+  #- Homepage: https://github.com/Huohua/HHRouter/
+  #- Source:   https://github.com/Huohua/HHRouter.git
+  
 end
