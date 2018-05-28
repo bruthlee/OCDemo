@@ -36,6 +36,7 @@
 #import "TabBarTestController.h"
 #import "LifeCycleViewController.h"
 #import "KVCViewController.h"
+#import "KVCModelDicController.h"
 
 @interface DemoViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -850,6 +851,11 @@
     [self.navigationController pushViewController:ctrl animated:YES];
 }
 
+- (void)showMultiModelDicDemo {
+    KVCModelDicController *ctrl = [[KVCModelDicController alloc] init];
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
+
 #pragma mark - Datas
 
 - (void)demoDatas {
@@ -957,7 +963,8 @@
     [self.dataSource addObject:kvoSection];
     
     DemoObject *kvcDemo = [DemoObject initWithName:@"The basic usage of KVC" method:@"showKvcDemo"];
-    DemoSection *kvcSec = [DemoSection initWithTitle:@"KVC" list:@[kvcDemo]];
+    DemoObject *kvcDic = [DemoObject initWithName:@"MultiModel Change With Dictionary" method:@"showMultiModelDicDemo"];
+    DemoSection *kvcSec = [DemoSection initWithTitle:@"KVC" list:@[kvcDemo, kvcDic]];
     [self.dataSource addObject:kvcSec];
     
     [self.tableView reloadData];

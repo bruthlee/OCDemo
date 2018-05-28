@@ -70,6 +70,15 @@
 		BDCE521E1FBB43EC008D3716 /* CollisionBehaviorController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCE521D1FBB43EC008D3716 /* CollisionBehaviorController.m */; };
 		BDCE52211FBB4E84008D3716 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCE52201FBB4E84008D3716 /* BaseViewController.m */; };
 		BDCE52241FBB516B008D3716 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCE52231FBB516B008D3716 /* BaseNavigationController.m */; };
+		BDDD047C20A9E1C000891014 /* KVCModelDicController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDD047B20A9E1C000891014 /* KVCModelDicController.m */; };
+		BDDD047F20A9E29000891014 /* KVCDicSimpleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDD047E20A9E29000891014 /* KVCDicSimpleModel.m */; };
+		BDDD048120A9E53D00891014 /* KVCDicSimpleDatas2.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDDD048020A9E53D00891014 /* KVCDicSimpleDatas2.plist */; };
+		BDDD048320A9E78E00891014 /* KVCDicSimpleDatas1.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDDD048220A9E78E00891014 /* KVCDicSimpleDatas1.plist */; };
+		BDDD048720A9ECB800891014 /* NSObject+EnumDicOneLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDD048620A9ECB800891014 /* NSObject+EnumDicOneLevel.m */; };
+		BDDD048A20A9FB2900891014 /* NSObject+EnumDicWithIvar.m in Sources */ = {isa = PBXBuildFile; fileRef = BDDD048920A9FB2900891014 /* NSObject+EnumDicWithIvar.m */; };
+		BDDD048C20AA036400891014 /* KVCDicSimpleDatas3.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDDD048B20AA036400891014 /* KVCDicSimpleDatas3.plist */; };
+		BDDD048E20AA081000891014 /* KVCDicSimpleDatas4.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDDD048D20AA081000891014 /* KVCDicSimpleDatas4.plist */; };
+		BDDD049020AA0B0E00891014 /* KVCDicSimpleDatas5.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDDD048F20AA0B0E00891014 /* KVCDicSimpleDatas5.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -195,6 +204,19 @@
 		BDCE52201FBB4E84008D3716 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		BDCE52221FBB516B008D3716 /* BaseNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		BDCE52231FBB516B008D3716 /* BaseNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		BDDD047A20A9E1C000891014 /* KVCModelDicController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCModelDicController.h; sourceTree = "<group>"; };
+		BDDD047B20A9E1C000891014 /* KVCModelDicController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCModelDicController.m; sourceTree = "<group>"; };
+		BDDD047D20A9E29000891014 /* KVCDicSimpleModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KVCDicSimpleModel.h; sourceTree = "<group>"; };
+		BDDD047E20A9E29000891014 /* KVCDicSimpleModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KVCDicSimpleModel.m; sourceTree = "<group>"; };
+		BDDD048020A9E53D00891014 /* KVCDicSimpleDatas2.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KVCDicSimpleDatas2.plist; sourceTree = "<group>"; };
+		BDDD048220A9E78E00891014 /* KVCDicSimpleDatas1.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KVCDicSimpleDatas1.plist; sourceTree = "<group>"; };
+		BDDD048520A9ECB800891014 /* NSObject+EnumDicOneLevel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+EnumDicOneLevel.h"; sourceTree = "<group>"; };
+		BDDD048620A9ECB800891014 /* NSObject+EnumDicOneLevel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+EnumDicOneLevel.m"; sourceTree = "<group>"; };
+		BDDD048820A9FB2900891014 /* NSObject+EnumDicWithIvar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+EnumDicWithIvar.h"; sourceTree = "<group>"; };
+		BDDD048920A9FB2900891014 /* NSObject+EnumDicWithIvar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+EnumDicWithIvar.m"; sourceTree = "<group>"; };
+		BDDD048B20AA036400891014 /* KVCDicSimpleDatas3.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KVCDicSimpleDatas3.plist; sourceTree = "<group>"; };
+		BDDD048D20AA081000891014 /* KVCDicSimpleDatas4.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KVCDicSimpleDatas4.plist; sourceTree = "<group>"; };
+		BDDD048F20AA0B0E00891014 /* KVCDicSimpleDatas5.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = KVCDicSimpleDatas5.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -444,10 +466,20 @@
 		BDAF68F320A5D680002F0563 /* KVC */ = {
 			isa = PBXGroup;
 			children = (
+				BDDD048420A9ECA000891014 /* Category */,
 				BDAF68F720A5D7E3002F0563 /* KVCModel.h */,
 				BDAF68F820A5D7E3002F0563 /* KVCModel.m */,
+				BDDD047D20A9E29000891014 /* KVCDicSimpleModel.h */,
+				BDDD047E20A9E29000891014 /* KVCDicSimpleModel.m */,
+				BDDD048220A9E78E00891014 /* KVCDicSimpleDatas1.plist */,
+				BDDD048020A9E53D00891014 /* KVCDicSimpleDatas2.plist */,
+				BDDD048B20AA036400891014 /* KVCDicSimpleDatas3.plist */,
+				BDDD048D20AA081000891014 /* KVCDicSimpleDatas4.plist */,
+				BDDD048F20AA0B0E00891014 /* KVCDicSimpleDatas5.plist */,
 				BDAF68F420A5D71A002F0563 /* KVCViewController.h */,
 				BDAF68F520A5D71A002F0563 /* KVCViewController.m */,
+				BDDD047A20A9E1C000891014 /* KVCModelDicController.h */,
+				BDDD047B20A9E1C000891014 /* KVCModelDicController.m */,
 			);
 			path = KVC;
 			sourceTree = "<group>";
@@ -544,6 +576,17 @@
 			path = Masonary;
 			sourceTree = "<group>";
 		};
+		BDDD048420A9ECA000891014 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				BDDD048520A9ECB800891014 /* NSObject+EnumDicOneLevel.h */,
+				BDDD048620A9ECB800891014 /* NSObject+EnumDicOneLevel.m */,
+				BDDD048820A9FB2900891014 /* NSObject+EnumDicWithIvar.h */,
+				BDDD048920A9FB2900891014 /* NSObject+EnumDicWithIvar.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		F091E5A6B6C054AD36B6369D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -622,11 +665,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD41A84C1FBDBCB400DA5BD3 /* p1_gif.gif in Resources */,
+				BDDD048E20AA081000891014 /* KVCDicSimpleDatas4.plist in Resources */,
 				BD5398071F372AD60090CD05 /* LaunchScreen.storyboard in Resources */,
 				BD5398041F372AD60090CD05 /* Assets.xcassets in Resources */,
+				BDDD048C20AA036400891014 /* KVCDicSimpleDatas3.plist in Resources */,
 				5A785F56209473450087DFE0 /* index.html in Resources */,
+				BDDD048120A9E53D00891014 /* KVCDicSimpleDatas2.plist in Resources */,
 				BD5398021F372AD60090CD05 /* Main.storyboard in Resources */,
+				BDDD048320A9E78E00891014 /* KVCDicSimpleDatas1.plist in Resources */,
 				5A460424202472B600325635 /* video.plist in Resources */,
+				BDDD049020AA0B0E00891014 /* KVCDicSimpleDatas5.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +754,7 @@
 				BDCE52211FBB4E84008D3716 /* BaseViewController.m in Sources */,
 				BDAF68F620A5D71A002F0563 /* KVCViewController.m in Sources */,
 				BD0BB8D720A3501000CC6DC1 /* TabSubSecondController.m in Sources */,
+				BDDD048720A9ECB800891014 /* NSObject+EnumDicOneLevel.m in Sources */,
 				BDCC4A591FC671840031F706 /* LLDoubleLinkedList.m in Sources */,
 				BDCE52081FBA9370008D3716 /* Student+CoreDataProperties.m in Sources */,
 				BDCE52141FBAE126008D3716 /* FetchedResultViewController.m in Sources */,
@@ -719,6 +768,7 @@
 				5A01F54B202160F2007735E9 /* SocketManager.m in Sources */,
 				5A785F54209473140087DFE0 /* WebViewController.m in Sources */,
 				BDCE52241FBB516B008D3716 /* BaseNavigationController.m in Sources */,
+				BDDD048A20A9FB2900891014 /* NSObject+EnumDicWithIvar.m in Sources */,
 				5AB0EF0B1FDFCC25004B554D /* FontViewController.m in Sources */,
 				BD5397FC1F372AD60090CD05 /* AppDelegate.m in Sources */,
 				BDB3584320A8777B003B6039 /* UIViewController+Category.m in Sources */,
@@ -748,7 +798,9 @@
 				BDCE52091FBA9370008D3716 /* DataCenter.xcdatamodeld in Sources */,
 				BDCE521E1FBB43EC008D3716 /* CollisionBehaviorController.m in Sources */,
 				BD41A84A1FBDB79A00DA5BD3 /* UIView+FrameCategory.m in Sources */,
+				BDDD047C20A9E1C000891014 /* KVCModelDicController.m in Sources */,
 				BDCE52021FBA9370008D3716 /* Employee+CoreDataProperties.m in Sources */,
+				BDDD047F20A9E29000891014 /* KVCDicSimpleModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
