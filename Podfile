@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+#platform :ios, '10.0'
 
 target 'OCDemo' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
@@ -38,16 +38,20 @@ target 'OCDemo' do
   #- Homepage: https://github.com/robbiehanson/CocoaAsyncSocket
   #- Source:   https://github.com/robbiehanson/CocoaAsyncSocket.git
   
-  pod 'Tangram', '~> 1.0.7'
+  pod 'Tangram'
   #- Homepage: https://github.com/alibaba/tangram-ios
   #- Source:   https://github.com/alibaba/Tangram-iOS.git
 
-  pod 'Aspects', '~> 1.4.1'
+  pod 'Aspects'
   #- Homepage: https://github.com/steipete/Aspects
   #- Source:   https://github.com/steipete/Aspects.git
   
-  pod 'HHRouter', '~> 0.1.9'
+  pod 'HHRouter'
   #- Homepage: https://github.com/Huohua/HHRouter/
   #- Source:   https://github.com/Huohua/HHRouter.git
+  
+  pod 'lottie-ios'
+  #- Homepage: https://github.com/airbnb/lottie-ios
+  #- Source:   https://github.com/airbnb/lottie-ios.git
   
 end
